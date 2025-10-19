@@ -69,9 +69,6 @@ class StatusBarController: NSObject, NSMenuDelegate {
     
     private func updateBatteryInfo() {
         let batteryStatusItem = menu.items.first { $0.identifier?.rawValue == "batteryStatusItem" }
-
-        // Display source data :
-        let data = IOPSCopyPowerSourcesInfo()
         
         if let snapshot = IOPSCopyPowerSourcesInfo()?.takeRetainedValue(),
             let sources = IOPSCopyPowerSourcesList(snapshot)?.takeRetainedValue() as? [CFTypeRef],
