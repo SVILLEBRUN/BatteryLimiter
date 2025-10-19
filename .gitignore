@@ -55,3 +55,7 @@ playground.xcworkspace
 # User-specific files
 *.iml
 *.hmap
+
+# Xcode user data
+xcuserdata/
+*.xcuserstate
